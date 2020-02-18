@@ -1,0 +1,19 @@
+---
+- name: "create vms for {{ student }}"
+  tags:
+    - vm
+  loop:
+    - vm1
+    - vm2
+    - vm2
+  digital_ocean_droplet:
+    name: "{{ student }}-{{ item }}"
+    tag:
+      - "{{ student }}"
+    oauth_token: "{{ digitalocean_token }}"
+    size: 4gb
+    region: fra1
+    image: centos-7-x64
+    ssh_keys: "{{ admin_keys_ids }}"
+    wait_timeout: 500
+  register: "{{ student }}"

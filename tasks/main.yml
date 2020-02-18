@@ -1,0 +1,28 @@
+---
+- name: add admin ssh keys
+  tags:
+    - vm
+    - keys
+  loop: "{{ admin_keys }}"
+  digital_ocean_sshkey:
+    oauth_token: "{{ digitalocean_token }}"
+    name: "{{ item.name }}"
+    ssh_pub_key: "{{ item.key }}"
+  register: admin_keys_result
+
+- name: get ids for ssh keys
+  tags:
+    - vm
+    - keys
+  loop: "{{ admin_keys_result['results'] }}"
+  set_fact:
+    admin_keys_ids: "{{ admin_keys_ids | default([ ]) }} + [{{ item['data']['ssh_key']['id'] }}]"
+
+- name: create student vms
+  tags:
+    - vm
+    - students
+  loop: "{{ students }}"
+  loop_control:
+    loop_var: student
+  include_tasks: student-vms.yml
