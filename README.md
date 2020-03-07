@@ -21,8 +21,7 @@ Example
     admin_keys:
       - name: kaik
         key: AAAA...
-    students:
-      - student01
+    students_count: 1
     roles:
       - role: ansible-digitalocean-students
 ```

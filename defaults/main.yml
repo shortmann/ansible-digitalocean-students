@@ -2,5 +2,4 @@
 admin_keys:
   - name: kaik
     key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCcQqgqsbPpJ1yyVTKVadKJKR6dygTMEd41qL+XV9zUi+Ggh0iZBLcvLOnUkeqpPVRKAWBziqzqm1J8/Ph5u7XSBx1wMrw5eyxaV3f9bsl39MtBF5vCNeyyggBg1RiYijEszRAWsgal68zyOuyTew2Ip8AV9LpLYeSXmkmObr6jzKJszbi35qQrK0bELCgSpwVv04EmS6ix953Bc0nkJnm0DI0dmElrM8UCypUtOdOuxN62PAulcOmQ82yMVSLTnsymnFFX1pBrLelnqAjPKUfEdkf3zQ0Zt+l6vqJsdFmgaLPAEA7sbH1GMkPh2D181XyBT/7dq4mzvJZZoFiwksJf kaik@Kais-MacBook-Pro.local"
-students:
-  - student01
+students_count: 1
