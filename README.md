@@ -17,7 +17,6 @@ Example
 ```yaml
 - name: create student vms
   vars:
-    digitalocean_token: XXX
     admin_keys:
       - name: kaik
         key: AAAA...
